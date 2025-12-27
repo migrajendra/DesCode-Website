@@ -1,0 +1,22 @@
+
+
+<script>
+  const buttons = document.querySelectorAll('.accordion-btn');
+  const contents = document.querySelectorAll('.accordion-content');
+  const images = document.querySelectorAll('.image-slide');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetImage = btn.dataset.image;
+
+      contents.forEach(content => content.style.maxHeight = null);
+      const content = btn.nextElementSibling;
+      content.style.maxHeight = content.scrollHeight + 'px';
+
+      images.forEach(img => img.classList.add('opacity-0'));
+      document.getElementById(targetImage).classList.remove('opacity-0');
+    });
+  });
+
+  buttons[0].click();
+</script>
