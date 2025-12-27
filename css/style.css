@@ -86,6 +86,7 @@
 .rotateCircle {
   
   animation: rotateCircle 30s linear infinite;
+  overflow: hidden;
 }
   .acrd-btn h4{
    font-size: 1.16rem;
