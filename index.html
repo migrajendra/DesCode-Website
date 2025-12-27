@@ -63,39 +63,6 @@
             });
         </script>
 
-        <style>
-              body { font-family: 'Poppins', sans-serif; }
-
-              /* Gradient background */
-              .bg-soft-gradient {
-                background: linear-gradient(to bottom, #fff6f9, #ffffff);
-              }
-
-              /* Accordion animation */
-              .accordion-content {
-                overflow: hidden;
-                max-height: 0;
-                transition: max-height 0.5s ease;
-              }
-
-              /* Image switch */
-              .image-slide {
-                transition: opacity 0.5s ease;
-              }
-
-              .opacity-0 {
-                opacity: 0;
-              }
-
-              /* Dashed circle */
-              .circle-dashed {
-                width: 520px;
-                height: 520px;
-                border: 2px dashed #f3a4c7;
-                border-radius: 50%;
-              }
-        </style>
-
     </head>
 
     <body>
@@ -260,7 +227,7 @@
                       <div class="position-absolute circle-dashed rotateCircle"></div>
                       <div class="position-absolute circle-dashed2 rotateCircle"></div>
 
-                      <div class="position-relative" style="width: 470px; height: 500px; top: 10px;">
+                      <div class="position-relative w-100 mx-auto" style="max-width:470px; aspect-ratio:470/500;">
                         <img id="img1"
                           src="img/design-approach.jpg" alt="Design-Driven Approach"
                           class="image-slide position-absolute top-00 bottom-00  rounded-pill start-0 w-100 h-100 rounded-4  object-fit-cover">
