@@ -77,7 +77,52 @@
         <!-- Spinner End -->
 
         <div id="header"></div>
+          
 
+        <div id="mainHeader" class="container-fluid px-0">
+    <div class="container px-m">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-white py-33 px-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <img 
+                  src="../img/descode-digital-logo.svg" 
+                  width="200" 
+                  alt="DesCode Digital - UI/UX Design & Web Development Agency Logo"
+                />
+            </a>
+
+           <button class="navbar-toggler" id="menuToggle" type="button">
+            <span class="fa fa-bars"></span>
+          </button>
+
+            <div class="collapse navbar-collapse mobile-slide-menu" id="navbarCollapse" style="font-size:1.1em;">
+                
+                <div class="mobile-col">
+                  <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">
+  &times;
+</button>  
+                    <a href="index.html" class="navbar-brand p-0">
+                <img 
+                  src="../img/descode-digital-logo.svg" 
+                  width="180" 
+                  alt="DesCode Digital - UI/UX Design & Web Development Agency Logo"
+                />
+            </a>
+                   </div> 
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <a href="project.html" class="nav-item nav-link">Projects</a>
+                    <a href="contact.html" class="nav-item nav-link">Blog</a>
+                </div>
+
+                <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-bt ms-3">
+                    Contact Us
+                </a>
+            </div>
+        </nav>
+    </div>
+</div>
 
 
         <!-- Carousel Start -->
@@ -580,6 +625,41 @@
 
 
 
+<!-- ================= OVERLAY ================= -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+  const toggleBtn = document.getElementById('menuToggle');
+  const menu = document.getElementById('navbarCollapse');
+  const overlay = document.getElementById('menuOverlay');
+  const closeBtn = document.getElementById('menuCloseBtn');
+
+  function openMenu() {
+    menu.classList.add('show');
+    overlay.classList.add('active');
+    document.body.classList.add('menu-open');
+  }
+
+  function closeMenu() {
+    menu.classList.remove('show');
+    overlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  }
+
+  toggleBtn.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
+
+  // Close on nav link click
+  document.querySelectorAll('.mobile-slide-menu .nav-link')
+    .forEach(link => link.addEventListener('click', closeMenu));
+
+  // ESC key close
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMenu();
+  });
+</script>
 
 
 
