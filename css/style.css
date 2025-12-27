@@ -103,6 +103,64 @@
 html, body {
   overflow-x: hidden;
 }
+.py-33 {
+  padding-top: 0.7rem !important;
+  padding-bottom: 0.7rem !important;
+}
+
+/* ===== Mobile Slide Menu ===== */
+
+@media (max-width: 991.98px) {
+
+  .mobile-slide-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 75%;
+    max-width: 330px;
+    background: #fff8f8;
+    padding: 30px 30px 30px;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 1050;
+  }
+
+  .mobile-slide-menu.show {
+    transform: translateX(0);
+  }
+
+  .mobile-slide-menu .navbar-nav {
+    flex-direction: column;
+    gap: 0px; margin-top: 25px;
+  }
+
+  .mobile-slide-menu .nav-link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #222;
+    margin-bottom : 0px;
+    margin-top: 0px;
+  }
+
+  .mobile-slide-menu .btn {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .px-m{
+    padding-left: 20px; padding-right: 20px;
+    
+}
+.py-33 {
+  padding-top: 1.1rem !important;
+  padding-bottom: 1.1rem !important;
+}
+
+}
 
 .rotateCircle {
   
@@ -411,7 +469,9 @@ h1 strong{font-weight: 700; color: #f72a4c;}
 
 @media (max-width: 991px) {
     .navbar .navbar-nav .nav-item.nav-link {
-        margin: 15px 0 !important;
+        margin: 5px 0 !important;
+        text-transform: uppercase;
+        font-size: 16px;
     }
 
 }
@@ -585,9 +645,29 @@ h1 strong{font-weight: 700; color: #f72a4c;}
         object-fit: cover;
     }
 
+    .display-1 {
+  font-size: calc(1.625rem + 1.5vw);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.fs-5 {
+  font-size: 1.0rem !important;
+}
+.px-5 {
+  padding-right: 2.5rem !important;
+  padding-left: 2.5rem !important;
+}
+.owl-carousel .owl-stage-outer {
+  height: 580px;
+}
+
+.header-carousel .header-carousel-item .carousel-caption {
+  top: -80px;
+  left: 50%;
+}
     .owl-prev,
     .owl-next {
-        top: 40px !important;
+        top: 90% !important;
     }
 
     .owl-prev {
@@ -915,3 +995,16 @@ h1 strong{font-weight: 700; color: #f72a4c;}
     background: var(--bs-dark) !important;
 }
 /*** copyright end ***/
+
+
+@media (max-width: 650px) {
+.owl-carousel .owl-stage-outer {
+  height: 480px;
+}
+  .display-1 {
+    font-size: calc(1.625rem + 1.0vw);
+  }
+   .header-carousel .header-carousel-item .carousel-caption {
+    top: -100px;
+  }
+}
